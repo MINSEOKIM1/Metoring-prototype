@@ -18,8 +18,8 @@ public class SelectCharacter : MonoBehaviour
     public GameObject SelectPanel;
 
     public Sprite[] chSprites;
-    
-    public Image targetImage;
+
+    public GameObject fightButton;
 
     private Button currentTargetButton; //변경할 버튼 저장
 
@@ -41,6 +41,11 @@ public class SelectCharacter : MonoBehaviour
         currentTargetButton.GetComponent<Image>().sprite = chSprites[index];
         Debug.Log("설정");
         SelectPanel.SetActive(false);
+
+        if (selectedCharacters.Count >= 2)
+        {
+            fightButton.SetActive(true);
+        }
     }
 
     public void fightStart()

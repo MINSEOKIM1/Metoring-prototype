@@ -7,10 +7,10 @@ public class CharacterSKill : MonoBehaviour
     // Start is called before the first frame update
     public GameObject skill1;
     public GameObject skill2;
-    public GameObject skillon;
+    //public GameObject skillon;
     public Camera mainCamera;
-    
 
+    public GameObject skillEffect;
     void Start()
     {
        // Debug.Log("½ºÆù");
@@ -38,7 +38,7 @@ public class CharacterSKill : MonoBehaviour
     {
         skill1.SetActive(false);
         skill2.SetActive(false);
-        skillon.SetActive(false);
+        //skillon.SetActive(false);
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
@@ -49,7 +49,10 @@ public class CharacterSKill : MonoBehaviour
                 hp.Damaged(30);
             }
         }
-        StartCoroutine(CameraShake(0.5f, 0.5f));
+        
+        GameObject eft = Instantiate(skillEffect,  this.transform.position, Quaternion.identity);
+        Destroy(eft, 0.9f);
+        StartCoroutine(CameraShake(0.3f, 0.5f));
 
     }
 
@@ -75,7 +78,7 @@ public class CharacterSKill : MonoBehaviour
 
         yield return new WaitForSeconds(5f);
         this.GetComponent<SpriteRenderer>().material.color = new Color(1f, 1f, 1f, 1f);
-        skillon.SetActive(true);
+        //skillon.SetActive(true);
 
     }
 }

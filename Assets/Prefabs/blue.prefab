@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2767724398124456488}
   - component: {fileID: 2108665723759249112}
   m_Layer: 0
-  m_Name: stumpy
+  m_Name: blue
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ad901536362a76a47b354f59a99224bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac961eb776642c2479e68636195744bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -98,8 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbdd526274498084bac89ae2e5da5d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 60
   HPImage: {fileID: 3994571616530316174}
+  hitImage: {fileID: 21300000, guid: e4594e193dbf95f4483b4fbe747bac36, type: 3}
+  spriteRenderer: {fileID: 2767724398124456488}
+  normalSprite: {fileID: 21300000, guid: ac961eb776642c2479e68636195744bb, type: 3}
 --- !u!1 &4763694196410008401
 GameObject:
   m_ObjectHideFlags: 0
