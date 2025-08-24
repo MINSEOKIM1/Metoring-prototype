@@ -9,31 +9,55 @@ public class Request : MonoBehaviour
     bool isstart;
 
     [SerializeField]
-    public GameObject SelectButton;
-    public GameObject SelectImage;
 
+    public GameObject StageUI;
 
     public GameObject SuccessImage;
-    public GameObject FailedImage;
+
+    //===============================
+    public GameObject[] questWindow;
+
+
+    private int currentIdex;
     void Start()
     {
         isstart = false;
+        currentIdex = 0;
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P)){
-            SuccesQuest();
-        }
+
     }
+
+    public void nextButton()
+    {
+        //Debug.Log(currentIdex);
+
+        if(currentIdex < questWindow.Length-1)
+        {
+            questWindow[currentIdex++].SetActive(false);
+            questWindow[currentIdex].SetActive(true);
+        }
+        if(currentIdex == 2)
+        {
+            StageUI.SetActive(false);
+        }
+
+    }
+
+
+    //==========================================
 
     public void QusetStart()
     {
         if (isstart) return;
         //미션 진행하기
-        //StartCoroutine(ShowAndHide(SelectImage));
-        SelectImage.SetActive(true);
-       isstart = true;
+        //StoryImage.SetActive(false);
+        nextButton();
+        //questWindow[0].SetActive(true);
+        StageUI.SetActive(true);
+        isstart = true;
 
     }
 
@@ -46,14 +70,6 @@ public class Request : MonoBehaviour
 
     }
 
-    public void FailedQuest()
-    {
-        Debug.Log("미션 실패");
-        isstart = false;
-        StartCoroutine(ShowAndHide(FailedImage));
-        SceneManager.LoadScene(1);
-
-    }
 
     private IEnumerator ShowAndHide(GameObject obj)
     {

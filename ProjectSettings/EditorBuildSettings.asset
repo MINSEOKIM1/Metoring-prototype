@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: ffa4f5e3b89c4294dba395fc43ed4e49
   - enabled: 1
+    path: Assets/Scenes/Lith Harbor.unity
+    guid: 8a83ad4d3fc08d84eacd864ebb9e157c
+  - enabled: 1
+    path: Assets/Scenes/Hennessy.unity
+    guid: 84bab1a1e79951b41898e9365e12f417
+  - enabled: 1
+    path: Assets/Scenes/Sleepywood.unity
+    guid: 8bf3127d1073aca41954846612d3b781
+  - enabled: 1
     path: Assets/Scenes/GameScene1.unity
     guid: 9053f288fa989a14e92adae2d7674f08
-  - enabled: 1
-    path: Assets/Scenes/Dungeon1.unity
-    guid: 8e6c9df1a7d42d74ea91977334cd2430
   m_configObjects: {}
