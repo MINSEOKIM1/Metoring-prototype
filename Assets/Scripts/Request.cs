@@ -16,7 +16,7 @@ public class Request : MonoBehaviour
 
     //===============================
     public GameObject[] questWindow;
-
+    public GameObject nxtbtn;
 
     private int currentIdex;
     void Start()
@@ -41,7 +41,8 @@ public class Request : MonoBehaviour
         }
         if(currentIdex == 2)
         {
-            StageUI.SetActive(false);
+            nxtbtn.SetActive(false);
+            //StageUI.SetActive(false);
         }
 
     }
